@@ -6,14 +6,19 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 11.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-07 21:48+0000\n"
-"PO-Revision-Date: 2019-10-07 21:48+0000\n"
+"POT-Creation-Date: 2019-11-07 15:31+0000\n"
+"PO-Revision-Date: 2019-11-07 15:31+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
+
+#. module: incoming_products_kardex
+#: model:ir.ui.view,arch_db:incoming_products_kardex.incoming_products_kardex_report_document
+msgid "4-AR-22 v0"
+msgstr "4-AR-22 v0"
 
 #. module: incoming_products_kardex
 #: model:ir.ui.view,arch_db:incoming_products_kardex.incoming_products_kardex_report_document
@@ -27,11 +32,6 @@ msgstr "<strong>NO CONFORME</strong>"
 
 #. module: incoming_products_kardex
 #: model:ir.ui.view,arch_db:incoming_products_kardex.incoming_products_kardex_report_document
-msgid "<strong>PRODUCT</strong>"
-msgstr "<strong>PRODUCTO</strong>"
-
-#. module: incoming_products_kardex
-#: model:ir.ui.view,arch_db:incoming_products_kardex.incoming_products_kardex_report_document
 msgid "CODE"
 msgstr "CODIGO"
 
@@ -39,11 +39,6 @@ msgstr "CODIGO"
 #: model:ir.model.fields,field_description:incoming_products_kardex.field_stock_kardex_line_product_conform
 msgid "Comform"
 msgstr "Conforme"
-
-#. module: incoming_products_kardex
-#: model:ir.actions.act_window,help:incoming_products_kardex.incoming_products_kardex_action
-msgid "Create."
-msgstr "Crear."
 
 #. module: incoming_products_kardex
 #: model:ir.model.fields,field_description:incoming_products_kardex.field_incoming_products_kardex_create_uid
@@ -76,7 +71,7 @@ msgstr "Nombre a mostrar"
 #. module: incoming_products_kardex
 #: model:ir.ui.view,arch_db:incoming_products_kardex.incoming_products_kardex_view_form
 msgid "Get"
-msgstr "Generar"
+msgstr "Obtener información"
 
 #. module: incoming_products_kardex
 #: model:ir.ui.view,arch_db:incoming_products_kardex.incoming_products_kardex_view_form
@@ -148,6 +143,11 @@ msgstr "Lote"
 #: model:ir.model.fields,field_description:incoming_products_kardex.field_stock_kardex_line_ordered_qty
 msgid "Ordered qty"
 msgstr "Cantidad pedida"
+
+#. module: incoming_products_kardex
+#: model:ir.ui.view,arch_db:incoming_products_kardex.incoming_products_kardex_report_document
+msgid "PRODUCT"
+msgstr "PRODUCTO"
 
 #. module: incoming_products_kardex
 #: model:ir.ui.view,arch_db:incoming_products_kardex.incoming_products_kardex_view_form

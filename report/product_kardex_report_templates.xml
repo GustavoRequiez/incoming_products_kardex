@@ -12,15 +12,18 @@
           <div class="row mt32 mb32">
             <table class="table table-condensed">
               <tr>
-                <strong>
-                  <td style="border:solid 1px;" colspan="10" width="500">
 
-                    <h1 style="text-align:center; font-size:70px;">PRODUCT</h1>
-                    <h1 style="text-align:center; font-size:70px;" t-if="o.product_conform">CONFORM</h1>
-                    <h1 style="text-align:center; font-size:70px;" t-else="">NO CONFORM</h1>
+                <td style="border:solid 1px;" colspan="10" width="500">
 
-                  </td>
-                </strong>
+                  <h1 style="text-align:center; font-size:70px;">PRODUCT</h1>
+                  <h1 style="text-align:center; font-size:70px;" t-if="o.product_conform">
+                    <strong>CONFORM</strong>
+                  </h1>
+                  <h1 style="text-align:center; font-size:70px;" t-else="">
+                    <strong>NO CONFORM</strong>
+                  </h1>
+
+                </td>
               </tr>
 
               <tr>
@@ -130,11 +133,11 @@
 
               <tr>
                 <td style="text-align:center;" colspan="5" width="250">
-                  <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('EAN13', o.product_name, 600, 100)" style="width:300px;height:50px"/>
+                  <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', o.product_name, 600, 100)" style="width:300px;height:50px"/>
                   <!-- <img t-att-src="'/report/barcode/QR/%s' % '450-00100-CAJ'"/> -->
                 </td>
                 <td style="text-align:center;" colspan="5" width="250">
-                  <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('EAN13', docs.lot, 600, 100)" style="width:300px;height:50px"/>
+                  <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', docs.lot, 600, 100)" style="width:300px;height:50px"/>
                   <!-- <img t-att-src="'/report/barcode/QR/%s' % '450-00100-CAJ'"/> -->
                 </td>
               </tr>
