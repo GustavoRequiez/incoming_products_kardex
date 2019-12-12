@@ -10,6 +10,7 @@ _logger = logging.getLogger(__name__)
 
 class IncomingProductsKardex(models.TransientModel):
     _name = 'incoming.products.kardex'
+    _description = "Modulo para crear Kardex de ingreso de material al almacen"
 
     picking_id = fields.Many2one(
         'stock.picking', 'Stock Picking', domain=[('origin', '=ilike', '%OCR%')], required=True)
@@ -111,6 +112,7 @@ class IncomingProductsKardex(models.TransientModel):
 
 class StockKardexLine(models.TransientModel):
     _name = 'stock.kardex.line'
+    _description = "Modulo para crear Kardex de ingreso de material al almacen (lineas)"
 
     stock_kardex_id = fields.Many2one(
         'incoming.products.kardex', 'Kardex', readonly=True)
