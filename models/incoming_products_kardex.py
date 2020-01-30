@@ -13,7 +13,7 @@ class IncomingProductsKardex(models.TransientModel):
     _description = "Modulo para crear Kardex de ingreso de material al almacen"
 
     picking_id = fields.Many2one(
-        'stock.picking', 'Stock Picking', domain=[('origin', '=ilike', '%OCR%')], required=True)
+        'stock.picking', 'Stock Picking', required=True)  # domain=[('origin', '=ilike', '%OCR%')],
 
     @api.multi
     def get_stock_picking_data(self):
