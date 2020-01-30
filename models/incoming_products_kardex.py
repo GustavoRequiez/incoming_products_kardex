@@ -29,7 +29,7 @@ class IncomingProductsKardex(models.TransientModel):
             stock_kardex_obj.create({
                 'stock_kardex_id': self.id,
                 'product_name': line.product_id.barcode,
-                'ordered_qty': line.ordered_qty,
+                'ordered_qty': line.product_uom_qty,
                 'qty_by_palette': 0,
                 'product_conform': False})
 
