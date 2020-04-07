@@ -19,20 +19,15 @@ class IncomingProductsKardex(models.TransientModel):
     def get_stock_picking_data(self):
         stock_move_ids = self.env['stock.move'].search(
             [('picking_id', '=', self.picking_id.id)])
-        ids = []
-        for i in stock_move_ids:
-            ids.append(i.id)
-        stock_move_line_ids = self.env['stock.move.line'].search(
-            [('move_id', 'in', ids)])
+
         stock_kardex_obj = self.env['stock.kardex.line']
-        for line in stock_move_line_ids:
+        for line in stock_move_ids:
             stock_kardex_obj.create({
                 'stock_kardex_id': self.id,
                 'product_name': line.product_id.barcode,
                 'ordered_qty': line.product_uom_qty,
                 'qty_by_palette': 0,
                 'product_conform': False})
-
         return {
             'type': 'ir.actions.act_window',
             'res_model': 'incoming.products.kardex',
@@ -117,6 +112,6 @@ class StockKardexLine(models.TransientModel):
     stock_kardex_id = fields.Many2one(
         'incoming.products.kardex', 'Kardex', readonly=True)
     product_name = fields.Char('Product', readonly=True)
-    ordered_qty = fields.Float('Ordered qty', readonly=True)
+    ordered_qty = fields.Float('Ordered qty', readonly=False)
     qty_by_palette = fields.Float('Qty by palette')
     product_conform = fields.Boolean('Comform')
